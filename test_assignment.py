@@ -2,7 +2,7 @@ import pytest
 import inspect
 from assignment import only_odd_digits, is_cyclops, is_pandigital
 
-def test1(function):
+def check_contains_loop(function):
     source = inspect.getsource(function)
     return 'for' in source or 'while' in source
 
@@ -15,7 +15,7 @@ def test1(function):
     (1, True),        
     (0, False),          
 ])
-def test2(num, expected):
+def test1(num, expected):
     assert only_odd_digits(num) == expected
     assert check_contains_loop(only_odd_digits)
 
@@ -29,7 +29,7 @@ def test2(num, expected):
     (505, True),          
     (50005, False),       
 ])
-def test3(num, expected):
+def test2(num, expected):
     assert is_cyclops(num) == expected
     assert check_contains_loop(is_cyclops)
 
@@ -45,6 +45,6 @@ def test3(num, expected):
     (1123456789, False),    
     (9876543201, False),   
 ])
-def test_is_pandigital(num, expected):
+def test3(num, expected):
     assert is_pandigital(num) == expected
     assert check_contains_loop(is_pandigital)
