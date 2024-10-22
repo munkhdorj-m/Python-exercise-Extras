@@ -6,7 +6,7 @@ def test1(function):
     source = inspect.getsource(function)
     return 'for' in source or 'while' in source
 
-@@pytest.mark.parametrize("num, expected", [
+@pytest.mark.parametrize("num, expected", [
     (1357975313579, True), 
     (42, False),        
     (9713, True),   
