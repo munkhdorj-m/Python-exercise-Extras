@@ -1,35 +1,51 @@
 import pytest
 import inspect
-from assignment import find_highest_digit, repeat_number, is_prime_number
+from assignment import only_odd_digits, is_cyclops, is_pandigital
 
-def check_contains_loop(function):
+def test1(function):
     source = inspect.getsource(function)
     return 'for' in source or 'while' in source
 
-@pytest.mark.parametrize("num, expected", [
-    (1234, 4),
-    (91635, 9),
-    (0, 0),
-])
-def test1(num, expected):
-    assert find_highest_digit(num) == expected
-    assert check_contains_loop(find_highest_digit)
-
-@pytest.mark.parametrize("num, expected", [
-    (4, 4444),
-    (7, 7777777),
-    (1, 1),
+@@pytest.mark.parametrize("num, expected", [
+    (1357975313579, True), 
+    (42, False),        
+    (9713, True),   
+    (71358, False),        
+    (8, False),            
+    (1, True),        
+    (0, False),          
 ])
 def test2(num, expected):
-    assert repeat_number(num) == expected
-    assert check_contains_loop(repeat_number)
+    assert only_odd_digits(num) == expected
+    assert check_contains_loop(only_odd_digits)
 
 @pytest.mark.parametrize("num, expected", [
-    (3, True),
-    (18, False),
-    (41, True),
-    (1, False)
+    (0, True),          
+    (101, True),       
+    (98053, True),        
+    (777888999, False),    
+    (1056, False),        
+    (675409820, False),    
+    (505, True),          
+    (50005, False),       
 ])
 def test3(num, expected):
-    assert is_prime_number(num) == expected
-    assert check_contains_loop(is_prime_number)
+    assert is_cyclops(num) == expected
+    assert check_contains_loop(is_cyclops)
+
+@pytest.mark.parametrize("num, expected", [
+@pytest.mark.parametrize("num, expected", [
+    (123456789, True),      
+    (987654321, True),     
+    (123455678, False),     
+    (2301938, False),      
+    (192837465, True),     
+    (987612345, True),     
+    (111111111, False),     
+    (12345678, False),    
+    (1123456789, False),    
+    (9876543201, False),   
+])
+def test_is_pandigital(num, expected):
+    assert is_pandigital(num) == expected
+    assert check_contains_loop(is_pandigital)
