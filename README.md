@@ -1,27 +1,32 @@
-# Python LOOP 4
-
-Python Loops PPT:
-[https://drive.google.com/drive/folders/1V9L54sGRVtGork9DONvOaFZq5krgh9TB?usp=sharing
-](https://docs.google.com/presentation/d/1cRZd43s_xyNBLZ6vgFiUILPUMMtWDtBO/edit?usp=sharing&ouid=118175980541210638913&rtpof=true&sd=true)
-
----
+# Python Extras
 
 ## Exercise 1
 
 **Problem:**
 
-Find highest digit of a given number.
+Even the odds
+
+Check that the given positive integer n contains only odd digits (1, 3, 5, 7 and 9) when it is written
+out. Return True if this is the case, and False otherwise. Note that this question is not asking
+whether the number n itself is odd or even. You therefore will have to look at every digit of the given
+number before you can proclaim that the number contains no even digits.
 
 **Example:**
 
-	Input: 1234
-	Output: 4
+	Input: 8
+	Output: False
  
- 	Input: 91635
-	Output: 9
+ 	Input: 1357975313579
+	Output: True
  
-  	Input: 0
-	Output: 0
+  	Input: 42
+	Output: False
+
+  	Input: 9713
+	Output: True
+
+   	Input: 71358 
+	Output: False
 
 ---
 
@@ -29,40 +34,54 @@ Find highest digit of a given number.
 
 **Problem:**
 
-Return the given number with the same number of digits.
+Cyclops number
+
+A nonnegative integer is said to be a cyclops number if it consists of an odd number of digits so
+that the middle (more poetically, the “eye”) digit is a zero, and all the other digits of that number are
+non zero. This function should determine whether its parameter integer n is a cyclops number, and
+return either True or False accordingly.
 
 **Example:**
 
-	Input: 4
-	Output: 4444
+	Input: 0
+	Output: True
  
- 	Input: 7
-	Output: 7777777
+ 	Input: 101
+	Output: True
  
-  	Input: 1
-	Output: 1
+  	Input: 98053
+	Output: True
+ 
+  	Input: 777888999 
+	Output: False
 
+  	Input: 1056 
+	Output: False	
 
+   	Input: 675409820  
+	Output: False	
 ---
 
 ## Exercise 3
 
 **Problem:**
 
-Check if a given number is prime number or not.
+Pandigital Number Checker
+
+A pandigital number contains each digit from 1 to 9 exactly once, in any order. Write a function that checks if a given positive integer is a pandigital number. The function should return True if the number meets the criteria, otherwise False.
 
 **Example**
 
- 	Input: 3
+ 	Input: 123456789
   	Output: True
  
-  	Input: 18
+  	Input: 987654321
   	Output: False
  
-  	Input: 41
-  	Output: True
+  	Input: 123455678
+  	Output: False
    
-  	Input: 1
+  	Input: 2301938
   	Output: False
      
 ---
