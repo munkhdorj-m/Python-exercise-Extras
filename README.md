@@ -76,13 +76,19 @@ A pandigital number contains each digit from 1 to 9 exactly once, in any order. 
   	Output: True
  
   	Input: 987654321
-  	Output: False
+  	Output: True
  
   	Input: 123455678
   	Output: False
    
   	Input: 2301938
   	Output: False
+
+   	Input: 111111111
+    	Output: False
+
+     	Input: 987612345
+  	Output: True
      
 ---
 
