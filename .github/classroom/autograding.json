@@ -8,7 +8,7 @@
         "output": "",
         "comparison": "included",
         "timeout": 5,
-        "points": 1
+        "points": 10
       },
       {
         "name": "exercise2",
@@ -17,7 +17,7 @@
         "output": "",
         "comparison": "included",
         "timeout": 5,
-        "points": 1
+        "points": 10
       },
       {
         "name": "exercise3",
@@ -26,7 +26,7 @@
         "output": "",
         "comparison": "included",
         "timeout": 5,
-        "points": 1
+        "points": 10
       }
     ]
   }
