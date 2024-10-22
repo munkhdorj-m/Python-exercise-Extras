@@ -34,7 +34,6 @@ def test3(num, expected):
     assert check_contains_loop(is_cyclops)
 
 @pytest.mark.parametrize("num, expected", [
-@pytest.mark.parametrize("num, expected", [
     (123456789, True),      
     (987654321, True),     
     (123455678, False),     
